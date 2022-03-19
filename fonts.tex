@@ -1,11 +1,13 @@
 \documentclass{scrartcl}
 
 \usepackage{fontspec}
-\setmainfont[
-    BoldFont={OpenSans-Bold.ttf},
-    ItalicFont={OpenSans-Italic.ttf},
-    BoldItalicFont={OpenSans-BoldItalic.ttf}
-]{OpenSans-Regular.ttf}
+\setmainfont{OpenSans}[
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont={*-Bold},
+    ItalicFont={*-Italic},
+    BoldItalicFont={*-BoldItalic}
+]
 
 \begin{document}
     My \textbf{bold} text. {\itshape Wow!}

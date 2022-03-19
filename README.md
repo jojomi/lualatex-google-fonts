@@ -21,15 +21,18 @@ You need [**this**](fonts.pdf) in LaTeX? Then read on.
 5. Import the `fontspec` package in your tex file and set the font for your document in the preamble:
     ``` latex
     \usepackage{fontspec}
-    \setmainfont[
-      BoldFont={OpenSans-Bold.ttf},
-      ItalicFont={OpenSans-Italic.ttf},
-      BoldItalicFont={OpenSans-BoldItalic.ttf}
-    ]{OpenSans-Regular.ttf}
+    \setmainfont{OpenSans}[
+        Extension = .ttf,
+        UprightFont = *-Regular,
+        BoldFont={*-Bold},
+        ItalicFont={*-Italic},
+        BoldItalicFont={*-BoldItalic}
+    ]
     %\setsansfont...
     %\setmonofont...
     ```
     Define the font types you need. Sans and mono fonts are optional, but use the same syntax.
+    For more details see the [fontspec documentation](https://texdoc.org/serve/fontspec/0).
 
     (see [fonts.tex](fonts.tex))
 6. Compile:
